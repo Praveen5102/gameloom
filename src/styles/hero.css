@@ -1,14 +1,26 @@
+/* src/styles/hero.css */
+
 .hero-section {
   padding: 120px 20px 80px;
-  background-color: #260347;
+  background-color: #312352;
   color: white;
   display: flex;
-  justify-content: flex-start; /* aligns content to left */
+  justify-content: center;
+}
+
+.hero-inner-wrapper {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: flex-start; /* Align to left */
+  align-items: flex-start;
 }
 
 .section-header.vertical {
-  max-width: 800px;
-  text-align: justify;
+  max-width: 600px; /* Same width as the left preview card */
+  text-align: left;
   transition: all 0.6s ease;
   transform-style: preserve-3d;
   opacity: 1;
@@ -17,16 +29,17 @@
 .section-header.vertical h1 {
   font-size: 4rem;
   font-weight: 800;
-  line-height: 1.2;
+  opacity: 0.8;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .section-header.vertical p {
   font-size: 1.25rem;
   line-height: 1.7;
   opacity: 0.8;
-  max-width: 600px;
-  margin: 0 auto;
+  margin: 0;
+  text-align: left;
 }
 
 /* Responsive */
@@ -37,5 +50,19 @@
 
   .section-header.vertical p {
     font-size: 1rem;
+  }
+
+  .hero-inner-wrapper {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-header.vertical {
+    text-align: center;
+  }
+
+  .section-header.vertical h1,
+  .section-header.vertical p {
+    text-align: center;
   }
 }

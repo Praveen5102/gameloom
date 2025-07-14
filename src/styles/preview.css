@@ -1,17 +1,28 @@
-/* src/styles/preview.css */
-.horizontal-space-between-container {
+/* Preview Section Wrapper */
+.preview-section {
+  background-color: #312352; /* Matches the hero/footer background */
+  padding: 60px 20px;
   display: flex;
-  gap: 40px;
   justify-content: center;
+}
+
+/* Aligns content to match footer width */
+.preview-inner-wrapper {
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  padding: 0 20px;
+  gap: 20px;
 }
 
+/* Individual preview card container */
 .preview-container {
-  flex: 1;
-  max-width: 500px;
+  width: calc(50% - 10px); /* Two cards per row, spacing included */
+  max-width: 600px;
 }
 
+/* Common styles for both preview cards */
 .dark-colour-card,
 .primary-colour-card {
   background: #5825af;
@@ -26,29 +37,31 @@
   opacity: 1;
 }
 
+/* Gradient style for primary card */
 .primary-colour-card {
   background: linear-gradient(135deg, #8b5cf6, #7c3aed);
 }
 
+/* Hover effect */
 .dark-colour-card:hover,
 .primary-colour-card:hover {
   transform: translateY(-5px);
 }
 
+/* GameLoom Logo inside cards */
 .utility-logo {
   height: 60px;
   margin-bottom: 20px;
 }
 
-.preview-wrapper {
-  margin: 30px 0;
-}
-
+/* Card image styling */
 .preview-image {
   width: 100%;
   border-radius: 8px;
+  margin-top: 20px;
 }
 
+/* CTA Button inside cards */
 .white-button {
   background: #ffffff;
   color: #000000;
@@ -58,16 +71,23 @@
   font-weight: 500;
   transition: all 0.3s ease;
   display: inline-block;
+  margin-top: 20px;
 }
 
 .white-button:hover {
   background: #f0f0f0;
 }
 
+/* Responsive behavior */
 @media (max-width: 768px) {
-  .horizontal-space-between-container {
+  .preview-inner-wrapper {
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
+  }
+
+  .preview-container {
+    width: 100%;
+    max-width: 100%;
   }
 
   .preview-image {

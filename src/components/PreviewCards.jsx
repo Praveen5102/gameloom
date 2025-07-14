@@ -19,22 +19,28 @@ const previews = [
 
 const PreviewSection = () => {
   return (
-    <div className="horizontal-space-between-container">
-      {previews.map((preview, i) => (
-        <div className="preview-container" key={i}>
-          <div className={i === 0 ? 'dark-colour-card' : 'primary-colour-card'}>
-            <img src={preview.logo} alt="Logo" className="utility-logo" />
-            <h2>{preview.title}</h2>
-            <div className="preview-wrapper">
-              <img src={preview.previewImg} alt={`${preview.title} Preview`} className="preview-image" />
+    <section className="preview-section">
+      <div className="preview-inner-wrapper">
+        {previews.map((preview, i) => (
+          <div className="preview-container" key={i}>
+            <div className={i === 0 ? 'dark-colour-card' : 'primary-colour-card'}>
+              <img src={preview.logo} alt="Logo" className="utility-logo" />
+              <h2>{preview.title}</h2>
+              <div className="preview-wrapper">
+                <img
+                  src={preview.previewImg}
+                  alt={`${preview.title} Preview`}
+                  className="preview-image"
+                />
+              </div>
+              <a href={preview.href} className="white-button w-inline-block">
+                <div>EXPLORE</div>
+              </a>
             </div>
-            <a href={preview.href} className="white-button w-inline-block">
-              <div>EXPLORE</div>
-            </a>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </section>
   );
 };
 
