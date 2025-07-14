@@ -6,9 +6,7 @@ A pixel-perfect React recreation of the original **GameLoom Interactive** landin
 
 ## 📸 Screenshot
 
-> ✅ Replace the image at `public/assets/gameloom.png` with your page screenshot.
-
-![GameLoom Landing Page Preview](./public/assets/gameloom.png)
+![GameLoom Landing Page Preview](src/gameloom.png)
 
 ---
 
