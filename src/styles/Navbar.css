@@ -1,10 +1,17 @@
+/* === GLOBAL NAVBAR STYLING === */
+.navbar-dark {
+  background-color: #312352;
+  width: 100%;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Container */
 .horizontal-centred-space-between-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #312352;
-  color: white;
 }
 
 .nav-bar-left-container {
@@ -12,109 +19,52 @@
   align-items: center;
 }
 
-.navbar-logo {
-  height: 40px;
-}
-
-.nav-menu {
+/* DESKTOP NAV MENU */
+.nav-menu.desktop {
   display: flex;
   gap: 20px;
   margin-left: 20px;
 }
 
-.navmenu-overflow-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+.white-nav-link {
+  color: #9e97af;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-left: 20px;
+  transition: color 0.3s ease;
 }
 
-.static-dropdown {
-  position: relative;
+.white-nav-link:hover {
+  color: #ffffff;
+}
+
+/* === GAMES DROPDOWN STYLES (DESKTOP) === */
+.game-dropdown.desktop {
+  margin-left: 40px; /* Gap from left edge */
+  color: #9e97af;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
   cursor: pointer;
 }
 
-.white-inline-nav-link {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-weight: 500;
-  color: white;
+.game-dropdown.desktop:hover {
+  color: #ffffff;
+}
+
+.game-dropdown.desktop * {
+  color: inherit;
   text-decoration: none;
 }
 
-.dark-dropdown-list-close {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #2a2a2a;
-  border-radius: 8px;
-  padding: 20px;
-  min-width: 800px;
-  z-index: 1000;
-  display: block;
-}
-
-.dropdown-wrapper-full-width {
-  display: flex;
-  gap: 30px;
-}
-
-.navbar-small-container {
-  max-width: 300px;
-}
-
-.navbar-large-container {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.navbar-cms-list {
-  display: flex;
-  gap: 20px;
-}
-
-.navbar-background-image-card {
-  width: 200px;
-  height: 120px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 8px;
-  overflow: hidden;
-  text-decoration: none;
-  display: block;
-  position: relative;
-}
-
-.absolute-overlay-navbar {
-  background: rgba(0, 0, 0, 0.5);
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-  padding: 10px;
-  color: white;
-}
-
-.navbar-text-wrapper h4 {
-  margin: 0;
-}
-
-.navbar-text-wrapper p {
-  font-size: 12px;
-  opacity: 0.8;
-  margin: 5px 0 0 0;
-}
-
-.white-nav-link {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
+/* === BUTTONS === */
 .light-button,
 .primary-button {
-  padding: 10px 20px;
+  padding: 12px 26px;
   border-radius: 6px;
   font-weight: 500;
+  font-size: 1.05rem;
   text-decoration: none;
   display: inline-block;
   transition: all 0.3s ease;
@@ -127,8 +77,9 @@
 }
 
 .light-button:hover {
-  background: #7c3aed;
+  background: transparent;
   color: white;
+  border-color: white;
 }
 
 .primary-button {
@@ -140,17 +91,22 @@
   background: #7c3aed;
 }
 
-.navbar-button-container {
+/* DESKTOP BUTTONS */
+.navbar-button-container.desktop {
   display: flex;
-  align-items: center;
   gap: 20px;
 }
 
+/* MOBILE BUTTONS */
+.navbar-button-container.mobile {
+  display: none;
+}
+
+/* === HAMBURGER === */
 .menu-button {
   display: none;
   flex-direction: column;
-  gap: 4px;
-  margin-left: 20px;
+  gap: 8px;
   cursor: pointer;
 }
 
@@ -160,23 +116,84 @@
   background: white;
 }
 
-/* Responsive */
+/* === MOBILE STYLES === */
 @media (max-width: 768px) {
-  .nav-menu {
-    flex-direction: column;
+  .nav-menu.desktop,
+  .navbar-button-container.desktop {
+    display: none;
   }
 
   .menu-button {
     display: flex;
   }
 
-  .navbar-button-container.desktop {
-    display: none;
+  .mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: #312352;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
   }
 
+  .close-button {
+    font-size: 36px;
+    color: white;
+    align-self: flex-end;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+
+  .mobile-menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  /* Mobile button container */
   .navbar-button-container.mobile {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  /* === MOBILE GAMES DROPDOWN === */
+  .game-dropdown.mobile {
+    color: #9e97af;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .game-dropdown.mobile:hover {
+    color: #ffffff;
+  }
+
+  .game-dropdown.mobile * {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/* === RESPONSIVE TOGGLE === */
+.game-dropdown.desktop {
+  display: flex;
+}
+
+.game-dropdown.mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .game-dropdown.desktop {
+    display: none;
+  }
+
+  .game-dropdown.mobile {
+    display: flex;
   }
 }

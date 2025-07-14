@@ -17,7 +17,7 @@ const HeroSection = () => {
           }}
         >
           <h1>
-            Welcome to
+            Welcometo
             <br />
             GameLoom
           </h1>

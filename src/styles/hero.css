@@ -1,68 +1,66 @@
 /* src/styles/hero.css */
 
 .hero-section {
-  padding: 120px 20px 80px;
+  padding: 120px 20px 10px;
   background-color: #312352;
   color: white;
   display: flex;
   justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .hero-inner-wrapper {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
   display: flex;
-  justify-content: flex-start; /* Align to left */
+  flex-direction: column;
   align-items: flex-start;
+  padding: 0 20px;
 }
 
 .section-header.vertical {
-  max-width: 600px; /* Same width as the left preview card */
+  max-width: 600px;
   text-align: left;
-  transition: all 0.6s ease;
-  transform-style: preserve-3d;
   opacity: 1;
 }
 
 .section-header.vertical h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
+  color: white;
   font-weight: 800;
-  opacity: 0.8;
   margin-bottom: 20px;
-  text-align: left;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 
 .section-header.vertical p {
-  font-size: 1.25rem;
-  line-height: 1.7;
-  opacity: 0.8;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.8;
   margin: 0;
-  text-align: left;
+  text-align: justify;
 }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .section-header.vertical h1 {
-    font-size: 2.5rem;
-  }
-
-  .section-header.vertical p {
-    font-size: 1rem;
-  }
-
   .hero-inner-wrapper {
-    justify-content: center;
     align-items: center;
   }
 
   .section-header.vertical {
+    max-width: 100%;
     text-align: center;
   }
 
-  .section-header.vertical h1,
+  .section-header.vertical h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
   .section-header.vertical p {
+    font-size: 1rem;
     text-align: center;
   }
 }
