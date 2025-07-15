@@ -12,153 +12,168 @@
 }
 
 .light-inline-link {
-  color: white;
+  color: #9e97af;
   text-decoration: none;
   font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.light-inline-link:hover {
+  color: #ffffff;
 }
 
 .dropdown-icon {
   font-size: 14px;
+  color: #9e97af;
 }
 
-/* Desktop Dropdown */
-.dropdown-content {
+/* === DROPDOWN PANEL === */
+.dark-dropdown-list-close {
   position: absolute;
   top: 100%;
   left: 0;
-  background: #2a2a2a;
-  padding: 20px;
-  min-width: 800px;
-  z-index: 999;
+  width: 100vw;
+  height: 280px;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+/* === BACKGROUND IMAGE WRAPPER === */
+.dropdown-bg-overlay {
+  width: 100%;
+  height: 100%;
+  background-image: url('C:\Users\prave\OneDrive\Desktop\project\Backend Projects\gameloom\src\bg.jpg'); /* ✅ Put bg.jpg in public folder */
+  background-size: cover;
+  background-position: center;
   display: flex;
-  gap: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  padding: 20px 40px;
 }
 
-.games-description {
-  max-width: 250px;
+/* === CONTENT WRAPPER === */
+.dropdown-wrapper-full-width {
+  width: 100%;
 }
 
-.games-description h1 {
-  font-size: 22px;
+.navbar-dropdown-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
   color: white;
-  margin-bottom: 10px;
+  align-items: flex-start;
 }
 
-.games-description p {
-  font-size: 14px;
-  color: #ccc;
+.navbar-small-container {
+  max-width: 300px;
 }
 
-.games-grid {
+.navbar-small-container h1 {
+  font-size: 32px;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.navbar-small-container p {
+  font-size: 16px;
+  color: #ffffff;
+  text-align: justify;
+  margin: 0;
+  opacity: 0.85;
+}
+
+/* === GAME CARDS === */
+.navbar-large-container {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
-.game-card {
+.navbar-cms-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.navbar-background-image-card {
   width: 200px;
-  height: 120px;
+  height: 200px;
   background-size: cover;
   background-position: center;
   border-radius: 8px;
-  text-decoration: none;
-  color: white;
-  display: flex;
-  align-items: flex-end;
   overflow: hidden;
+  text-decoration: none;
   position: relative;
 }
 
-.card-overlay {
+.absolute-overlay-navbar {
   background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
   padding: 10px;
-  width: 100%;
+  color: white;
 }
 
 .navbar-text-wrapper h4 {
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .navbar-text-wrapper p {
-  font-size: 12px;
+  font-size: 14px;
   opacity: 0.8;
-  margin-top: 5px;
+  margin-top: 4px;
 }
 
-/* Mobile Overlay */
+/* === RESPONSIVE FIXES === */
 @media (max-width: 768px) {
-  .dropdown-content {
-    display: none;
+  .dark-dropdown-list-close {
+    position: relative;
+    height: auto;
   }
 
-  .games-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1000;
-  }
-
-  .games-overlay.active {
-    display: block;
-  }
-
-  .games-content {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #2a2a2a;
-    padding: 20px;
-    display: flex;
+  .dropdown-bg-overlay {
     flex-direction: column;
+    padding: 20px;
+  }
+
+  .navbar-dropdown-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .navbar-small-container {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .navbar-small-container h1 {
+    font-size: 28px;
+  }
+
+  .navbar-small-container p {
+    text-align: center;
+    font-size: 15px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .navbar-cms-list {
+    flex-direction: column;
+    gap: 20px;
     align-items: center;
   }
 
-  .navmenu-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-  }
-
-  .games-description {
-    text-align: center;
-    max-width: 300px;
-    margin-bottom: 20px;
-  }
-
-  .games-description h1 {
-    font-size: 36px;
-  }
-
-  .games-description p {
-    font-size: 14px;
-    color: #ccc;
-  }
-
-  .games-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    width: 100%;
-  }
-
-  .game-card {
-    width: 100%;
+  .navbar-background-image-card {
+    width: 90%;
     height: 150px;
   }
-}
 
-@media (min-width: 769px) {
-  .games-overlay {
-    display: none;
+  .absolute-overlay-navbar {
+    padding: 8px;
   }
 }

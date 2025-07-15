@@ -19,7 +19,18 @@
   align-items: center;
 }
 
-/* DESKTOP NAV MENU */
+/* ✅ Logo styling */
+.logo-container {
+  margin-right: 50px;
+  
+}
+
+.navbar-logo {
+  height: 70px;
+  width: auto;
+}
+
+/* Desktop Nav Menu */
 .nav-menu.desktop {
   display: flex;
   gap: 20px;
@@ -39,9 +50,9 @@
   color: #ffffff;
 }
 
-/* === GAMES DROPDOWN STYLES (DESKTOP) === */
+/* Games Dropdown */
 .game-dropdown.desktop {
-  margin-left: 40px; /* Gap from left edge */
+  margin-left: 0; /* Reset left gap since logo has margin */
   color: #9e97af;
   font-weight: 500;
   font-size: 1.1rem;
@@ -58,7 +69,7 @@
   text-decoration: none;
 }
 
-/* === BUTTONS === */
+/* Buttons */
 .light-button,
 .primary-button {
   padding: 12px 26px;
@@ -91,18 +102,18 @@
   background: #7c3aed;
 }
 
-/* DESKTOP BUTTONS */
+/* Desktop Buttons */
 .navbar-button-container.desktop {
   display: flex;
   gap: 20px;
 }
 
-/* MOBILE BUTTONS */
+/* Mobile Buttons */
 .navbar-button-container.mobile {
   display: none;
 }
 
-/* === HAMBURGER === */
+/* Hamburger */
 .menu-button {
   display: none;
   flex-direction: column;
@@ -116,7 +127,7 @@
   background: white;
 }
 
-/* === MOBILE STYLES === */
+/* Mobile Fullscreen Overlay */
 @media (max-width: 768px) {
   .nav-menu.desktop,
   .navbar-button-container.desktop {
@@ -152,7 +163,6 @@
     gap: 20px;
   }
 
-  /* Mobile button container */
   .navbar-button-container.mobile {
     display: flex;
     flex-direction: column;
@@ -160,12 +170,15 @@
     margin-top: 20px;
   }
 
-  /* === MOBILE GAMES DROPDOWN === */
+  .game-dropdown.desktop {
+    display: none;
+  }
+
   .game-dropdown.mobile {
+    display: flex;
     color: #9e97af;
     font-weight: 500;
     font-size: 1.1rem;
-    transition: color 0.3s ease;
     cursor: pointer;
   }
 
@@ -179,7 +192,7 @@
   }
 }
 
-/* === RESPONSIVE TOGGLE === */
+/* Responsive Toggle */
 .game-dropdown.desktop {
   display: flex;
 }

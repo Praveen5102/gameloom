@@ -1,6 +1,8 @@
+// src/components/Navbar.jsx
 import React, { useState } from 'react';
 import '../styles/Navbar.css';
 import GameDropdown from './GamesDropdown';
+import GL_LOGO from '../assets/GL_LOGO.png'; // ✅ Make sure the logo is placed here
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,9 +11,17 @@ const Navbar = () => {
     <div className="navbar-dark">
       <div className="horizontal-centred-space-between-container">
         <div className="nav-bar-left-container">
+
+          {/* ✅ Logo aligned to far left */}
+          <div className="logo-container">
+            <a href="/home.html">
+              <img src={GL_LOGO} alt="GameLoom Logo" className="navbar-logo" />
+            </a>
+          </div>
+
           {/* Games Dropdown (Desktop only) */}
           <div className="game-dropdown desktop dropdown-left-gap">
-           <GameDropdown />
+            <GameDropdown />
           </div>
 
           {/* Desktop Menu */}
