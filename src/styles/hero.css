@@ -1,37 +1,38 @@
 /* src/styles/hero.css */
 
 .hero-section {
-  padding: 120px 20px 10px;
-  background-color: #312352;
+  padding: 120px 20px 0px;             /* top, horizontal, bottom */
+  background-color: #22173b;           /* matches preview-section bg */
   color: white;
+  font-family: 'Segoe UI', sans-serif;
   display: flex;
   justify-content: center;
-  font-family: 'Segoe UI', sans-serif;
 }
 
 .hero-inner-wrapper {
-  max-width: 1280px;
+  max-width: 1280px;                   /* Matches preview-inner-wrapper */
   width: 100%;
   margin: 0 auto;
+  padding: 0 20px;                     /* Matches preview horizontal padding */
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 0 20px;
+  align-items: flex-start;             /* Align left like preview */
 }
 
+/* Hero Text Block */
 .section-header.vertical {
-  max-width: 600px;
-  text-align: left;
+  max-width: 600px;                    /* Matches preview card width */
   opacity: 1;
+  text-align: left;
 }
 
 .section-header.vertical h1 {
   font-size: 3.5rem;
-  color: white;
   font-weight: 800;
   margin-bottom: 20px;
   line-height: 1.2;
   letter-spacing: -0.5px;
+  color: #ffffff;
 }
 
 .section-header.vertical p {
@@ -40,7 +41,7 @@
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.8;
   margin: 0;
-  text-align: justify;
+  text-align: justify; /* ensures justified text */
 }
 
 /* Responsive adjustments */
@@ -51,16 +52,19 @@
 
   .section-header.vertical {
     max-width: 100%;
-    text-align: center;
+    text-align: justify;
   }
 
   .section-header.vertical h1 {
-    font-size: 2.5rem;
-    text-align: center;
+    font-size: 2.8rem;
+    text-align: justify;
   }
 
   .section-header.vertical p {
-    font-size: 1rem;
-    text-align: center;
+    font-size: 1.12rem;
+    text-align: justify;
+    color: white;
+    font-weight: 400;
+    font-family: sans-serif;
   }
 }

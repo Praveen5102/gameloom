@@ -1,5 +1,5 @@
 .footer {
-  background-color: #312352;
+  background-color: #22173b;
   color: white;
   padding: 60px 20px 30px;
   font-family: 'Segoe UI', sans-serif;
@@ -10,6 +10,7 @@
   margin: 0 auto;
 }
 
+/* Layout */
 .horizontal-space-between-container {
   display: flex;
   flex-wrap: wrap;
@@ -25,36 +26,52 @@
 }
 
 .footer-logo {
-  width:150px;
+  width: 150px;
   height: 100px;
 }
 
+/* ✅ Side-by-side button layout */
 .button-container {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.primary-button,
-.light-button {
-  text-decoration: none;
-  padding: 12px 24px;
+.light-button,
+.primary-button {
+  padding: 12px 26px;
   border-radius: 6px;
-  font-weight: 600;
-  text-align: center;
+  font-weight: 500;
+  font-size: 1.05rem;
+  text-decoration: none;
   display: inline-block;
+  transition: all 0.3s ease;
 }
 
 .light-button {
-  background-color: #ffffff;
-  color: #7c3aed;
+  border: white;
+  color: #8b5cf6;
+  background: white;
+}
+
+.light-button:hover {
+  background: transparent;
+  color: white;
+  border-color: white;
 }
 
 .primary-button {
-  background-color: #7c3aed;
+  background: #8b5cf6;
   color: white;
 }
 
+.primary-button:hover {
+  background: #7c3aed;
+}
+
+/* Footer links */
 .footer-wrapper {
   display: flex;
   gap: 40px;
@@ -82,12 +99,13 @@
   color: #a78bfa;
 }
 
+/* Social */
 .social {
   max-width: 200px;
 }
 
 .social h4 {
-  font-size: 1.2rem;
+  font-size: 2.2rem;
   margin-bottom: 10px;
 }
 
@@ -102,10 +120,11 @@
 }
 
 .social-link img {
-  width: 24px;
-  height: 24px;
+  width: 42px;
+  height: 42px;
 }
 
+/* Divider */
 .grey-line {
   height: 1px;
   background-color: #333;
@@ -118,12 +137,25 @@
   margin-bottom: 30px;
 }
 
+/* Copyright */
 .copyright-text {
-  text-align: center;
-  font-size: 13px;
-  color: #888;
+  text-align: left;
+  font-size: 16px;
+  color: #b0abbe;
 }
 
+.copyright-text a {
+  color: #8b5cf6;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.copyright-text a:hover {
+  color: #4c30a1;
+}
+
+/* 📱 Responsive */
 @media (max-width: 768px) {
   .horizontal-space-between-container {
     flex-direction: column;
@@ -133,5 +165,11 @@
   .footer-wrapper {
     flex-direction: column;
     gap: 30px;
+  }
+
+  /* Stack buttons on small screens */
+  .button-container {
+    flex-direction: column;
+    gap: 12px;
   }
 }

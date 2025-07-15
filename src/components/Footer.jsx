@@ -7,26 +7,25 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="horizontal-space-between-container">
+          {/* Left section: Logo + Buttons */}
           <div className="vertical-container">
             <div className="footer-logo-wrapper">
               <img
                 src="https://cdn.prod.website-files.com/601a27d15148f65959c89ffd/60cc626e9fee237f63b6d591_Logo Imverse.png"
                 loading="lazy"
-                alt=""
+                alt="Footer Logo"
                 className="footer-logo"
               />
             </div>
+
+            {/* ✅ Side-by-side buttons */}
             <div className="button-container">
-              <a href="utility-pages/sign-up.html" className="light-button w-inline-block">
-                <div>SIGN UP</div>
-              </a>
-              <div className="button-spacer-16px"></div>
-              <a href="utility-pages/login-page.html" className="primary-button w-inline-block">
-                <div>LOG IN</div>
-              </a>
+              <a href="utility-pages/sign-up.html" className="light-button w-inline-block">SIGN UP</a>
+              <a href="utility-pages/login-page.html" className="primary-button w-inline-block">LOG IN</a>
             </div>
           </div>
 
+          {/* Footer links section */}
           <div className="footer-wrapper">
             <div className="footer-column right-margin-80">
               <a href="games.html" className="white-footer-link">Games</a>
@@ -50,6 +49,7 @@ const Footer = () => {
             </div>
           </div>
 
+          {/* Social links */}
           <div className="footer-column social">
             <h4 className="bottom-margin-20">
               Let’s stay<br /><span className="purple-highlight">connected</span>
@@ -63,15 +63,17 @@ const Footer = () => {
               </div>
             </div>
             <div className="social-wrapper">
-              <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" className="social-link w-inline-block"><img src="https://cdn.prod.website-files.com/601a27d15148f65959c89ffd/601b08bd4bc0850784ae8b4d_youtube.svg" alt="Youtube" /></a>
+              <a href="https://www.youtube.com/" target="_blank" rel="noreferrer" className="social-link w-inline-block"><img src="https://cdn.prod.website-files.com/601a27d15148f65959c89ffd/601b08bd4bc0850784ae8b4d_youtube.svg" alt="YouTube" /></a>
               <a href="https://store.steampowered.com/" target="_blank" rel="noreferrer" className="social-link w-inline-block"><img src="https://cdn.prod.website-files.com/601a27d15148f65959c89ffd/601b08bdf3122178cbf82822_steam.svg" alt="Steam" /></a>
               <a href="https://www.pinterest.ru/" target="_blank" rel="noreferrer" className="social-link w-inline-block"><img src="https://cdn.prod.website-files.com/601a27d15148f65959c89ffd/601b08bdbce5fc20453167f2_pinterest.svg" alt="Pinterest" /></a>
             </div>
           </div>
         </div>
 
+        {/* Divider */}
         <div className="grey-line margins-30"></div>
 
+        {/* Copyright */}
         <div className="copyright-text">
           Designed by <a href="https://gameloom.io/" target="_blank" rel="noreferrer">GameLoomInteractive</a>
         </div>

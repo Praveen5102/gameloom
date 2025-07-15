@@ -6,16 +6,7 @@ const HeroSection = () => {
   return (
     <section className="hero-section">
       <div className="hero-inner-wrapper">
-        <div
-          className="section-header vertical"
-          data-w-id="4323a3ed-216b-7790-e30e-7ff7519ae487"
-          style={{
-            transform:
-              'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)',
-            opacity: 1,
-            transformStyle: 'preserve-3d',
-          }}
-        >
+        <div className="section-header vertical">
           <h1>
             Welcometo
             <br />
